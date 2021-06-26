@@ -1,0 +1,95 @@
+#amk 2
+;*******************************************************************
+;Title = A Princess who loves insects, Ohmu
+;Ported by qantuum
+;version 0.2
+;*******************************************************************
+; Insert size: 0x487 bytes
+; Number of channels: 8
+; Total song length: 1:11
+; Version: AddmusicK 1.0.7
+; Samples: 9
+; tags: #ambient #calm #cave #desert #overworld #oriental #ruins #temple
+;*******************************************************************
+; SPC Generator Info
+#SPC
+{
+	#author "Joe Hisaishi"
+	#title "A Princess who loves insects, Ohmu"
+	#game "Nausicaa of the valley of the wind"
+	#comment "Remixed by qantuum"
+}
+;*******************************************************************
+#path "Nausicaa  - A Princess who loves insects"
+#samples
+{
+ #optimized
+ "ctsitar.brr"
+ "ctwater.brr"
+ "ctwood.brr"
+ "ctbass.brr"
+ "ctchoir.brr"
+ "ctkick.brr"
+ "cttuba.brr"
+ "ctbell.brr"
+}
+#instruments
+{
+ "ctsitar.brr" $FF $EE $6F $04 $7D ;@30
+ "ctwater.brr" $FF $E0 $6F $04 $E8 ;@31
+ "ctwood.brr"  $FF $40 $6F $04 $68 ;@32
+ "ctbass.brr"  $FF $E4 $6F $03 $38 ;@33
+ "ctchoir.brr"  $FF $E4 $6F $05 $A8 ;@34
+ "ctkick.brr" $FF $E0 $00 $10 $00 ; @35
+ "ctsitar.brr" $9D $6E $6F $04 $7D ; @36
+ "cttuba.brr" $FF $E7 $A0 $04 $00 ; @37
+ "cttuba.brr" $9C $C9 $A0 $04 $00 ; @38
+ "ctbell.brr" $FF $E0 $6F $04 $00 ;@39
+}
+;*******************************************************************
+$F5 $7F $00 $00 $00 $00 $00 $00 $00
+$F4 $02
+$EF $DB $2E $2E
+$F1 $05 $5F $01
+"SEMIT=$FA $02"
+"GAIN=$ED $80"
+"BEND=$DD"
+"VOLFAD=$E8"
+
+#0 v240 t38
+$DE $12 $09 $14
+@30 l8 v127 o3
+a24 b24 > c+24 d24 e24 f+24 / $E5 $00 $00 $00 @30 v170 y10 o4
+g+4. f+2 BEND$18$06 e BEND$00$0B f+ ^4. g+ a b4 a g+ f+ e2^ > e12 f+24 e24 d24 e2^8 BEND$18$06 d BEND$00$0B e ^3^12 <
+g+4. f+2 BEND$18$06 e BEND$00$0B f+ ^4. g+ a a6 > c+6 e12. c24 c+2 BEND$18$06 < b BEND$00$0F > c+ ^4 f+48 g+24. g+12^48 e48 f+12. e3^3^4 <
+g+4 BEND$18$06 f+ BEND$00$0F g+ ^ f+2 BEND$18$06 e BEND$00$0B f+ ^4. g+ a b4 a g+ g+12 f+12 e12 f+12 e12 d12 e3 b48 > e24. e12 e4. BEND$18$06 d BEND$00$0B e ^4 d16 c+16 d16 c+16 < a16 g+16
+g+4. f+ f+2. g+ a b4 a g+ e16 f+16 e16 d16 e2^48 VOLFAD$29$8A d24 e24 f+24 g+24 a24 v170 b4 VOLFAD$29$8A g+24 a24 b24 > c+24 d24 v170 e6^24. VOLFAD$40$8A d24 c+24 < a24 e24 f+24 g+24 a24 b24
+@37 v170 y9 $E5 $03 $30 $04
+o3 g+2^ BEND$00$48 a+ ^4. > c+1 c+6 < b6 a12. a6 b4 a12. < b2 BEND$00$30 > c+ ^4 f+ a f+2 BEND$00$30 g+ ^4 > e < e f+2 e2 v190
+g+2^ BEND$00$48 a+ ^4. > c+1 c+6 d6 e12. d6 c+4 d12. c+2. < b a b1 > e2 < b2
+
+#1 r6. /
+@34 v140 y10 l4 q7f (10)[ o4 r f+8 r f+8 r2 f+8 r f+8 r2 e8 r e8 r2 d+8 r e8 r ] (11)[ r f+8 r f+8 r ]2 r g+8 r g+8 r2 a8 r g+8 r8 e8 (11)2 SEMIT$FE (11)2 SEMIT$00 (10)
+v100 y12 l8 @38 o4 g+2^ BEND$00$48 a+ ^4. > c+1 c+6 < b6 a12. a6 b4 a12. < b2 BEND$00$30 > c+ ^4 f+ a f+2 BEND$00$30 g+ ^4 > e < e f+2 e2 > v90
+e2^ BEND$00$48 f+ ^4. a+1 > c+6 d6 e12. d6 c+4 d12. c+2. < b a b1 > e2 < b2
+
+#2 v180 l8
+r6. / o4 [ @31 y12 c. c16 @32 y8 g @31 y12 c4 c @32 y8 g y12 e16 y8 f16 ]28
+
+#3
+r6. / @36 v150 l16 SEMIT$00 $DF q3f [ r2 ]15 r8 o4 f+ g f+ e c+ < b [ r2 ]16
+@39 v90 l8 q5f $DE $00 $03 $14
+(30)[ o4 f+ c+ f+ a+ > c+ < a+ f+ c+ ]2 SEMIT$FC (30)2 SEMIT$FE (30)2 SEMIT$00 (30)2 SEMIT$FC (30)2 SEMIT$FE (30)2
+
+#4 @33 v255 l8
+r6. / GAIN$D0 [ o4 d4. d4 g+ a b ]14 [ e4. e4 b > c+ d ]2
+(40)[ o4 [[ f+4. f+4 a+ > c+ < a+ ]]2 d4. d4 > c+ < b a d4. d4 g+ a b e4. e4 g+ a b e4. e4 g+ ] o4 e g+ (40) o4 f+ g+
+
+#5 @35 v170 l8
+r6. / [ o4 q5b y8 c32 r.. c32 r.. c32 r.. q7f y10 d4 ]28
+
+#6 @34 v130 l4 y13
+r6. / (60)[ o4 r c+8 r c+8 r2 c+8 r c+8 r2 < b8 r b8 r2 b8 r b8 r ] o4 (61)[ r c+8 r c+8 r ]2 r e8 r e8 r2 e8 r e8 r8 c+8 (61)2 SEMIT$FE (61)2 SEMIT$00 (60) [ r2 ]24
+
+#7 @34 v127 l4 y6
+r6. / (70)[ o3 r a8 r a8 r2 a8 r a8 r2 g+8 r g+8 r2 g+8 r g+8 r ] (71)[ r a8 r a8 r ]2 r > c+8 r c+8 r2 c+8 r c+8 r8 < g+8 (71)2 SEMIT$FF (71)2 SEMIT$00 (70) [ r2 ]24
