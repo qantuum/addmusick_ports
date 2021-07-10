@@ -1,0 +1,73 @@
+#amk 2
+;*******************************************************************
+; version 0.1
+; Insert size: 0x4AA bytes
+; Number of channels: 7
+; Total song length: 4:31
+; Version: AddmusicKFF branch last stable
+; Samples: 6
+; tags: #ambient #calm #credits #cutscene #dark #evironmental #ice #misc #ruins #tense
+;*******************************************************************
+; SPC Generator Info
+#SPC
+{
+	#author "Philip Glass"
+	#title "Slowmo People"
+	#game "Koyaanisqatsi"
+	#comment "Ported by qantuum"
+}
+;*******************************************************************
+#path "Koyaanisqatsi - Slowmo People"
+#samples
+{
+ #optimized
+ "RSE - French Horn (-f3).brr"
+ "musicalman - cello 1 vib.brr"
+ "musicalman - harpsichord med 1.brr"
+ "musicalman - tuba.brr"
+ "musicalman - tom 3.brr"
+ "musicalman - sidestick 2.brr"
+}
+
+#instruments
+{
+ "RSE - French Horn (-f3).brr" $00 $00 $D8 $03 $34 ;@30
+ "musicalman - cello 1 vib.brr" $00 $00 $7F $03 $80 ;@31
+ "musicalman - harpsichord med 1.brr" $9C $73 $D8 $04 $00 ;@32
+ "musicalman - tuba.brr" $00 $00 $7F $02 $00 ;@33
+ "musicalman - tom 3.brr" $00 $00 $7F $02 $C0 ;@34
+ "musicalman - sidestick 2.brr" $00 $00 $7F $08 $00 ;@35
+}
+;*******************************************************************
+$EF$50$4C$30
+$F1$05$53$00
+"SEMIT=$FA$02"
+$F5 $00 $00 $14 $26 $26 $10 $08 $08 ;lowpass
+"TOM=@34 q7b o2 c"
+"TOMVOL=@34 q7f o2 c"
+"ZIT=@35 q76 o2 g"
+
+#0 w160 t33
+@30 v140 l1 y9 (0)[ o3 c^ < a+^ a^^^ > d^ c^ < a+^^^ a^^^ f^^ d+^^ d^^^^^ ] (1)[ r2 ]4
+(2)[ o4 d2 e2 f^. e^ d^. c < b. g2 ] y10
+(3)[ o3 a^ g^ f f a2 b2 > c2 e^ g^^^. > c2 < b2 a2 g2 f. e2 e^ ] y12
+(4)[ o4 f. d2 [[ e^ f f ]]2 e^ f^ f^ [[ f+^ ]]4 v120 f+ v110 ^ v100 f+ v85 ^ ] (5)[ r3 ]
+
+#1 @30 v140 l1 y12 r64 SEMIT$F4 (0) (1)4
+(2) SEMIT$00 y10 o3 c. f2 d. c2 c c e^^^ b > c. f2 e < a b2 > c2 d. e2 < a^
+(10)[ o4 d. < a+2 [[ a^ > d c+ ]]2 < a^ > d^ c+^ c+^ [[ d+^ ]]3 v120 d+ v110 ^ v100 d+ v85 ^ ] (5)
+
+#2 @30 v180 l1 y9 q7f $EE$23 $DE$00$C0$13 (1)12
+(20)[ o1 a^ r > d r c r^ < a+^ a^ r^ > f^^ d+^^ d^^^^^ ] $EE$00
+(21)[ o3 c^^^ < a^ a^ f^ e^^ ] o2 c. f2 d. c2 f f e^^^ b > c. f2 e < q7b a b2 q7f > c2 b. > e2 < a^
+(22)[ o2 q7f f^ e^ d a+ a^ < a+ > c+ c^ < a+ > f a+ f [[ f+2 c+2 ]]2 [[ d+2 < a+2 ]]6 q7d > d+2 < a+2 q7b > d+2 < a+2 q7a > d+2 < a+2 q77 > d+2 < a+2 ] (5)
+
+#3 @31 v140 l1 (1)64 SEMIT$0C (21) SEMIT$00 o3 c. f2 d. c2 c c e^^^ b > c. f2 e < q7a a b2 q7f > c2 d. e2 < a^ y9 (4) (5)
+
+#4 @32 v180 (1)130 o4 [ f8 > d8 a+8 d8 ]4 < [ e8 > c8 a8 c8 ]4 < [ f8 > d8 f8 a+8 ]4 < [ a12 > c12 e12 a12 e12 c12 ]4 < [ f8 > d8 f8 a+8 ]4 < [ a12 > c12 e12 a12 e12 c12 ]4 < [ a+12 > d12 f12 a+12 f12 d12 ]4 < [ a+12 > c+12 f12 a+12 f12 c+12 ]4 < [ a+12 > c+12 f+12 a+12 f+12 c+12 ]4 < [ a+12 > d+12 f+12 a+12 f+12 d+12 ]12
+v180 (40)[ r6 f+12 a+12 f+12 r12 ]2 v160 (40)2 v140 (41)[ r4 a+12 f+12 r12 ]2 v125 (41)2 (5)
+
+#5 @33 v125 l1 y14 h-1 $EE$E8 (1)12 r64^192 (20) $EE$00 h0 y12 (1)66 (22) (5)
+
+#6 v255 $FA$03$1E (1)68 r8
+y9 ZIT8 y12 TOMVOL8 [ y9 r4. TOM4. ZIT8 y12 TOMVOL8 ]31 (60)[ y9 r4. TOM4. ZIT16 y10 g16 y12 TOMVOL8 ]24 v235 (60) v215 (60) v195 (60) v170 (60) (5)
