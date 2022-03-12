@@ -1,0 +1,143 @@
+#amk 2
+;*******************************************************************
+; version 0.1
+; Insert size: 0xDC8 bytes
+; Number of channels: 8 
+; Total song length: 3:39
+; Version: AddmusicKFF branch last stable
+; Samples: 0
+; tags: #beach #bonus #credits #title #urban
+;*******************************************************************
+; SPC Generator Info
+#SPC
+{
+ #author "Earth, Wind and Fire"
+ #title "September (memes)"
+ #game "September"
+ #comment "Ported by qantuum"
+}
+;*******************************************************************
+; differences w/wo memes: tunings, extra instrument
+#instruments
+{
+ @9 $CF $14 $B8 $02 $99 ;@30 muted guit.
+ @13 $D9 $E1 $00 $03 $00 ;@31 chords
+ @0 $BC $A4 $00 $05 $FB ;@32 flute
+ @10 $FF $E0 $B8 $04 $A0 ;@33 Snare
+ @21 $FF $E0 $00 $03 $00 ;@34 kick
+ @23 $FF $E0 $7F $06 $00 ;@35 Closed
+ n1E $9F $50 $7F $00 $00 ; @36 crash cymbal
+ n1E $FF $D3 $7F $04 $00 ; @37 open
+ @7 $FE $B4 $B8 $01 $70 ;@38 cowbell-like
+}
+;*******************************************************************
+; differences w/wo memes: echo channels, filter and intensity
+$EF$0B$30$50
+$F1$04$39$01
+"SNARE=@33 o3 q7f a"
+"KICK=@34 o4 q7e e"
+"CLOSED=@35 o3 q77 a"	
+"CRASH=@36 q72 c"
+"OPEN=@37 q52 c"
+"CB=@38 q62 o4 b"
+
+; differences w/wo memes: instrument, volume
+#0 w239 t50 @30 v114 l16 $EB$0C$48$02
+[ o4 d r d r d r c r8. < a+ r8. a+8 r8 > c r c r < a8. r a+4 r8 ]3
+r8 g+ r8 g+ r8 g+ r8 g+ r8 g+ g+ r8 g+ r8 g+ r8 g+ g+ r g+ r8 g+ g+ r8 g+ r8 g+ r8 g+ a+ r a+ r8 g+ r8. g+ r8 g+ r8 g+ r4.. >
+d r d r8. c r8. < a+ r8. a+ r > c r c r c r < a4 a+ r8. a r > d r d r d r c r8. < a+ r8. a+ r > c r c r c r8. < a4 a+16.. a r^64 > d r d r d r c r8. < a+ r8. a+ r > c r c r c r < a4 a+8 r4
+(0)[ o2 a+ r a+8 > g+8 a+ r ]3 o2 a+ r4..
+(1)[ o4 d r d r d r c r8. < a+ r8. a+ r > c r c r c r < a4 a+ r8. a a+ > d r d r d r c r8. < a+ r8. a+ r > c r c r c < a8 r8. a+ r8. a r > d r d r d r c r8. < a+ r8. a+ r > c r c r c r < a4 a+4 r8 [[ o2 a+ r a+8 > g+8 a+ r ]]3 < a+8 a+8 > g+8 a+ r ]
+(2)[ o3 r8 g r a+8 > c r8. < a+ a+ r8 a+ r8. g r a+8 g r > c8 r8 < a+4 r8 g r a+8 > c r8. < a+ r8. a+ a+ r8 g r a+ r g r > c r8. < a+4 r8 g r a+8 > c r8. < a+ r8. a+ a+ r8 g r a+ r8. > c8 r8 < a+4 [[ o2 a+ r a+8 > g+8 a+ r ]]3 < a+ r a+8 a+8 r8 ]
+(3)[ o4 d r d r d r c r8. < a+ r4^ f r f r f r8. g r g r g r8. > d r d r d r c r8. < a+ r8. a+ r f r f r f8 r8 f8 g r g r8. >
+d r d r d r c r8. < a+ r8. a+ r8. f r f r8. f8 g r g r8. ]
+(0)3 o2 a+ r8. o4 a+4 (3) (0)3 o2 a+ r4.. (1) (2)2 (1) (2)3 >
+r8 g r a+8 > c r8. < a+ a+ r8 a+ r8. g r a+8 g r > c8 r8 < a+4
+r8 g r a8 > c r8. < a+ r8. a+ a+ r8 g r a+ r g r > c r8. < a+4
+r8 g r a+8 > c r8. < a+ r8. a+ a+ r8 g r a+ r8. > c8 r8 < a+4
+(0)3 o2 a+ r4 o4 f r g r8
+
+#1 v100 l16
+@31 q7b $ED$79$10 $DF o5 g4 g4 g4 g4 [ f4 f4 [[ g4 ]]6 ]2 f4 f4 g4 g4 $F4$09 (10)[ r2 ]7 r8
+@32 q7f $DE$00$04$0C (11)[ o3 g8 a+8 > c8 d r d r4.. ] o3
+a+ r > c r d4 f r g r c4 < a+8 > d r d r d8 (10) <
+a+ r > c r d4 f8 g r c4 < a+8 > d r d r d r (10) <
+(12)[ o3 a+ r > c r d4 f8 g r c4. < a+8 > c4 < a+2.. ] (10) o3 r8 > d8 c8 < a+8 > d r d r4.. <
+a+ r > c r d4 f8 g r c4. d r d d+8. d8 r4. <
+a+8 > c r d4 f8 g r c4 r8 d r d r d8 (10) (12) (10)2
+(13)[ o5 d4 d+8 d8 r2 d8 d+8 d8 c8 < a+4 > c4 ]2
+(14)[ o5 d4 d+8 d8 r2 d8 d+8 d8 c8 < a+4 g8 > c4 < a+1^4 r8 a+ r a+ r a+ r8. ]
+(15)[ o4 [[ a+4 g8 f8 ]]2 r8 a+8 g8 f8 a+4 g8 f8 ]2 (16)[ o4 a+4 g8 f8 ]2
+r8 a+8 g8 f8 a+4 > c8 < a+1^4 (10) (11) o3
+a8 > c8 d4 f8 g r c4 r8 d r d+4 d r (10) <
+a+ r > c r d r f r g r c4 r8 d r d r d8 (10) <
+a+8 > c r d4 f r g r c4. < a+8 > c4 < a+1^4 r4. > d8 f r f r f r4..
+d r f r g+8. r g8 r8 f4 g r g r a+ r f g8 r4..
+d r f r g+8 r8 g8 r8 f4 r8 d r d8 c8 < a+8 r2. >
+d8 f8 g8 c4. < a+8 > c4 < a+2.. r8  > g8 r8 a+8 r8 > c8 r4
+(13)2 (14) (13)2 (14) o4
+r8 d r f r f8 r8 f8 d+ r g+8. r g8 r8 f4 g+ r4^
+r8 f8 d+ r a+4. r8 g r g+8 g4 f4 g r4^
+r8 d8 f8 d r f r g r4^ d8 f8 g8 c4. < a+8 > c4 < g4 a+2. > g8 r8 a+ r8. > c r4^
+(13)2 o5 d4 d+8 d8 (10) d8 d+8 d8 c8 < a+4 g8 > c4 < a+1^4. r8 g8 a+8 > c8
+(13)2 o5 d4 d+8 d8 (10) d8 d+8 d8 c8 < a+4 g.. a+64 > c4 < a+1^4 r8 a+ r a+ r a+ r8. >
+[ [[ d4 d+8 d4. c8 < a+4. > c8 < g2^8 ]]2 > d4 d+8 d4. c8 < a+4. > c8 < g4. > c8 < a+1^1^8 ]2 r8
+
+; differences w/wo memes: volume, echo, instrument, octave, pitch bend
+#2 @30 v134 y8 l16 $EB$0C$48$02 h12
+(10)7 r4 o3 c < a+ g d+ < d+4 r8 d+8 d+8 r4. d8 r4 d8 g4 r4
+(20)[ o1 a+ r a+8 > g+8 a+8 ]7 o1 a+8 r4.
+(21)[ o2 d+ r d+8 r8 d8 r8 c8 r4 < a+ r a+8 f4 g8. r g8 a+8 ]2
+(22)[ o2 d+ r d+ r d+8 d8 r8 c8 r4 d r d8 f8 r8 ] o2 g r4..
+(20)3 o1 a+8 r8 a+4 (21)2 (22) o2 g8 r8 f8 r8 (20)2
+o1 r8 g8 r8 a+8 r8 > c8 r4
+(23)[ o2 d+4 g8 f r8. c8 c+8 d r8. < a+8 a8 r8 g4 a8 r8 ]3 (20)3 (24)[ o1 a+ r a+ r a+ r8. ]
+(25)[ o1 d+ r d+8 > d+8 d8 r8 c8 r4. < a+ r f r8. f8 f+8 g4 d+ r d+8 > d+8 d8 r8 c8 r8 < f8 r8 f8 f8 r8 f8 f+8 g4 d+ r d+8 > d+8 d8 r8 d8 r8 c8 r8 < f r f8 r8 f8 f+8 g4 ] (20)3 o1 a+ r8. a+4 (25) (20)3 o1 a+ r8. a+4 (21)2 (22) o2 g8 r8 f8 r8 (20)2 o1 r8 g8 r8 a+8 r8 > c8 r4 (23)3 (20)3 (24) (23)3 (20)3 (24) (21)2 (22)
+o2 g8 r8 f8 r8 (20)2 o1 r8 g8 r8 a+8 r8 > c8 r4 (23)3 (20)3 (24)
+(23)3 (20)3 (24) (23)3 (20)3 (24) (23)3 (20)3 o1 a+ r4 f r g r8
+
+; differences w/wo memes: small added delay, instrument, de-tuning
+#3 l16 r48
+@1 v130 q2f $EB$0C$48$02 (10)8 r8 o3 a+ r8 a+ r8 a+ r8 a+ r8 a+ a+ r8 a+ r8 a+ r8 > d8 r d
+@7 $EB$00$00$00 $ED$7F$45 $EE$0A v100 q7f y7 o4 c+ c+ c < a+ > c < a+8. o5 c+ c+ c < a+ > c < a+1^4.. > a+1. a+ r4.. (10)12 <
+d+2 g2 a+2 > d+8 r8 a+8 r8 (10)14
+(30)[ o4 r8 g8 r8 a+8 r8 > c8 r4 d4 d+8 d8 ] (10)3
+(31)[ o5 d4 d+8 d8 r1. ]2
+(32)[ o5 r8 a+ r g g a+ r ]3 a+ r a+ r a+ r8. (15)2 (16)2
+o4 r8 a+8 g8 f8 a+4 > c8 r8
+(33)[ o3 r a+ > c d [[ a+ a+ g f ]]5 a+ r8. a+8. r ] (10)12 (33) (10)2
+(34)[ o4 [[ a+4 g8 f r ]]2 r8 > a+ r2.^ ]2
+(35)[ o5 d4 f4 g2 a+1 ] (30) (10)3 (31)2 (32)3 o5 r8 a+ r a+8 r8
+(36)[ o5 [[ d4 d+8 d r8. < a+ r4.. a+8 g8 f r a+4 g8 f r ]]2 > d4 d+8 d r8. < a+ r4.. a+8 g8 f r a+4 > c8 < a+4 > a+ r g g a+ r8. a+ r g g a+ r g r a+ r g g a+ r a+ r a+ r a+ r8. ] (10)2 (34)2 (35)
+o4 r8 g8 r8 a+8 r8 > c8 r4 (36)2
+(37)[ o6 d r d r8. c r c r8. c r c8. r c r c r8. < a+ r a+ r a+ r8. ]2 o6 d r d r8. c r c r8. c r c8. r c r c r8. < a+ r a+ r a+ r a+1^1^8 (37)3
+o4 r a+ > c d [ a+ a+ g f ]5 a+ r4 f r g r8
+
+; differences w/wo memes: echo, volume
+#4 v170 l16 [ CLOSED4 ]16
+KICK4 CLOSED4 KICK4 CLOSED4 KICK4 CLOSED4 KICK4 SNARE a a a [ KICK8 CLOSED8 SNARE8 CLOSED8 ]7 KICK8 CLOSED8 r4
+(40)[ KICK8 e8 SNARE8 KICK8 CLOSED8 KICK8 SNARE8 CLOSED8 KICK8 e8 SNARE8 KICK8 CLOSED8 a8 SNARE8 CLOSED8 ]3
+(41)[ KICK8 e8 SNARE8 KICK8 CLOSED8 a8 SNARE8 CLOSED8 KICK8 e8 SNARE8 KICK8 ] KICK8 e e SNARE4 (40)3
+(42)[ KICK8 e8 SNARE8 KICK8 CLOSED8 KICK8 SNARE8 a a KICK8 e8 SNARE8 KICK8 CLOSED8 KICK8 SNARE4 ] (40)3
+(43)[ KICK8 e8 SNARE8 KICK8 CLOSED8 KICK8 SNARE8 CLOSED8 CLOSED8 a8 SNARE8 CLOSED8 SNARE8 a8 a4 ] (40)3
+(41) KICK4 SNARE4 (40)3 (41) CLOSED8 a8 SNARE8 CLOSED8
+(40)3 (42) (40)3 (43) (40)3 (43) (40)3 (42) (40)3 (43) (40)3 (43) (40)3 (43) (40)3
+(41) CLOSED8. SNARE a KICK CLOSED KICK32 CLOSED32 r8
+
+; differences w/wo memes: cowbell instrument
+#5 v200 l16 @35 o3 q75 [ r8 e8 ]24 CRASH1 (10)6 $F4$03 [ CB4 ]30 CB2 $F4$03
+(50)[ CRASH4 $F4$03 [[ CB4 ]]27 $F4$03 ]
+(51)[ [[ r8 OPEN8 ]]3 r4 ]
+(52)[ CRASH4 $F4$03 [[ CB4 ]]31 $F4$03 ]
+CRASH4 (53)[ $F4$03 CB4 $F4$03 ]29 $F4$03 CB2 $F4$03 CRASH4 (53)30 CRASH4 c4 (53)27
+(51) (52)2 (50) (51) (52)3 CRASH4 (53)23 CRASH4 (53)6 r4.
+
+#6 y9 l16
+@31 v50 $DE$00$60$0F o4 g1 d2 g2 g1 d2 < g4. r8 > g2.. d+8 d2 g2 (10)40 @32 v62 $DE$00$04$0C
+(60)[ o5 [[ f4 g8 f r2^ f8 g r f8 d+ r d4 d+8 r8 ]]2 f4 g8 f r2^ f8 g r f8 d+ r d4 d+8 f1.^8 r2 ]
+[ o5 [[ d4 c8 < a+8 ]]2 > r8 d8 c8 < a+8 > d4 c8 < a+8 ]2 > [ d4 c8 < a+8 ]2 > r8 d8 c8 < a+8 > d4 c8 < a+2^8 (10)35 (60)2 (10)16 (60)4 r8
+
+#7 @31 v67 y12 l2 $DE$00$60$0F $E5$30$30$13 (10)51 r4...
+(70)[ o5 a+ a f1 a+ a f g a+ a f g a+1. ] (10)49 (70) (10) (70) (10)17 (70) (10) (70) (10) (70) (10)
+a+ a f1 a+ a f g a+ a f g (10)4 r8^32
+
