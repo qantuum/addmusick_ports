@@ -1,0 +1,162 @@
+#amk 2
+;*******************************************************************
+; version 0.1
+; Insert size: 0xAAB bytes
+; Number of channels: 8
+; Total song length: 3:53
+; Version: AddmusicKFF branch last stable
+; Samples: 8
+; tags: athletic, beach, boss, dark, desert, eastern, ruins, temple
+;*******************************************************************
+; SPC Generator Info
+#SPC
+{
+ #author "Sandy Marton"
+ #title "Camel by camel (original)"
+ #game "People from Ibiza"
+ #comment "Re-arranged by qantuum"
+}
+;*******************************************************************
+#path "Sandy Marton - Camel by camel"
+#samples
+{
+ #default
+ "ctwhite.brr"
+ "musicalman - synth bass 9.brr"
+ "musicalman - synth ep 5.brr"
+ "musicalman - ethnic perc 2.brr"
+ "musicalman - elec cymb 1.brr"
+ "musicalman - power chord 4.brr"
+ "musicalman - harpsichord med 1.brr"
+ "musicalman - cabasa 1.brr"
+}
+#instruments
+{
+ "ctwhite.brr" $F8 $E0 $A0 $04 $92 ;@30
+ "musicalman - synth bass 9.brr" $FF $A7 $00 $0A $00 ;@31
+ "musicalman - synth ep 5.brr" $FF $ED $00 $01 $41 ;@32
+ "musicalman - ethnic perc 2.brr" $00 $00 $7F $00 $90 ;@33
+ "musicalman - elec cymb 1.brr" $8F $50 $00 $04 $80 ;@34
+ "musicalman - power chord 4.brr" $AF $A2 $00 $02 $00 ;@35
+ "musicalman - harpsichord med 1.brr" $9E $68 $00 $04 $00 ;@36
+ @10 $FF $C0 $B8 $04 $A0 ;@37 Snare
+ @21 $FF $C0 $00 $03 $00 ;@38 kick 
+ @13 $F9 $E0 $00 $04 $80 ;@39
+ @24 $FE $6A $B8 $07 $00 ;@40
+ "musicalman - cabasa 1.brr" $00 $00 $7F $07 $00 ;@41
+ "../default/13 SMW Thunder.brr" $00 $00 $DF $13 $00 ;@42 clap
+ @17 $FE $27 $B8 $0A $00 ;@43
+ @2 $AE $2F $B8 $03 $04 ;@44
+ @6 $FC $F1 $00 $03 $00 ;@45
+}
+;*********************** commands **********************************
+$EF$12$3F$45
+$F1$02$36$00
+$F5 $20 $40 $20 $10 $00 $00 $00 $00
+(!100)[$F4$09]
+(!101)[$ED$0F$FC]
+"SEMIT=$FA$02"
+;********************* instrument macros *****************************
+"WHITE = @30" "BASS = @31"
+"RHODES = @32" "TAIKO = @33"
+"CYMB = @34" "GUITAR = @35"
+"HARPSICHORD = @36" "SNARE= @37 q7e o3 a+"
+"KICK= @38 q7f o4 e" "SYNTH = @39"
+"COWBELL = @40 q7f o3 g" "CLAVA = @40 q3a o6 a"
+"CABASA = @41 o3 a" "CLAP = @42 o3 a"
+"BASSOON = @45"
+
+#0 w200 t46 l16 $DE$0C$0C$1C (!100, -1) (!101, 3)
+HARPSICHORD v200 (60)[ o3 [[ b > c d+ r d+8 ]]3 < b > c d+8 < b > c d+ e d+ c < b8 r8 ]2 /
+$DE$0C$0C$1C HARPSICHORD v200 q7f (0)[ o3
+b > c+ d8 d8 < b > c+ d e d c+ d8 < b8 r
+b > c+ d e8 d c+ d8 < b > c+8 < a b8 ]4 (2)[ 
+RHODES v140 q6f o5 b > c+ d e d q6b e d e d q6c e d r4^
+HARPSICHORD v200 q7f o4 d d e r g8 f+ e4 r1^4^ d d e r g8 f+ e8 a8 r4^ ] (0)4
+$F4$03 BASSOON v180 r8 o4 e e e8 < b > d8 e8 r8. e e f+4 f+ e8 e8 r4.. r8 e e e8 e e f+ a e8 r8 < b > c+ d4 e4 e4 r4. e8 e8 e f+ r4. e e a a a b a g+8 g+8 r4.. r8 e e e8 e e f+ a e8 r8 < b > c+ d4 e8 < b8 > e4 r4 $F4$03
+HARPSICHORD v200 (2) (3)[ o3 b > c d+8 d+8 < b > c d+ e d+ c < b8 r8 > d d e8 g8 f+ e8 ] r4.. (3) o4 a8 r4^
+(5)[ $F4$03 BASSOON v180 o4 r8 b8 b8 a8 b8 a b8 a4^ b8 b8 a a2^8. b8 b a b a b b a b8 b4^ b b8 a8 a2^8. b8 b8 b8 b b8 b8 b4^ b8. a8 a2^8. b8 b a b a b b8 b8 b4^ b8 b > c+8 < a2^ $F4$03 ]
+HARPSICHORD v200 (0)2
+$F4$03 BASSOON v180 r8 o4 e e e8 < b > d8 e8 r4 e a8 a8 a g+8 g+8 r4.. r c+ e8 e8 e e f+ a e8 r8 < b8 > d4 c+4 c+4 r4. e8 e8 < b > d8 e8 r8 e e r8. a8 a g+8 g+8 r4.. r d e8 e8 e e f+ a e8 r8 < b > c+ d4 e4 e4 r4 $F4$03
+(2)2 HARPSICHORD v200 (4)[ r8 o3
+b8 > c+8 r8 d8. e8 e e r8. d8 c+8 r8 d8. c+8 < a b r8.
+b8 > c+8 r8 d8. e8 e e r8 b > c+ d e8 d c+ d8 < b > c+8 < a b8 ]2 (1)[ r2 ]8 (0)2 (5)
+@0 v155 q4f [ o5 b b < b > b < b > b b < b > b < b > b < b > b b < b b ]8
+$F4$03 $DE$00$10$2C $E5$00$12$2A SYNTH v220 o4 (6)[ r4 g2 r2. a2 g1 r2 f+2 ]2
+$E5$00$00$00 $DE$0C$0C$1C $F4$03 HARPSICHORD v200 (2)
+
+#1 CYMB v170 l16 [ r1... o3 f+8 ]2 / BASS v255
+(10)[ o1 e e r4 e e r4.. e e8 e8 e e r2^8 e e r4 e e r4.. e e8 e8 e e r4 > d4 d+8 ]2
+(11)[ o1 b8 > b8 < b > b8 b < g8 > g8 < g > g8 g < a8 > a8 < a > a8 a < e8 > e < g8 > g8 a ]2 (10)2
+(12)[ o1 e e r4 e e r4.. e e8 e8 e e r2^8 e e r4 e e ] (13)[ o1 r4. b > d e4 d4 < b4 g4 ]
+(12) (14)[ o1 r4.. e e8 e8 e e r4 > d8 r8 e8 ] (11)8 (10) (12) (13) (12) (14) (11)4
+TAIKO v160 [ o6 q7c g+ g+ q7f g+ q7c g+ g+ g+ q7f g+ q7c g+ g+ g+ q7f g+ q7c g+ g+ g+ q7f g+ q7c g+ ]8 q7f
+@44 $F4$03 v165 (0)4 $F4$03 BASS v255 (11)8 (10)2 (11)2
+
+#2 TAIKO v140 l16 [ o6 e e e e < f+8 > e e e8 e < f+8 > e < f+8 ]4 /
+RHODES v140 (20)[ o3 e > e < b > e < e > e < b > d < e > e < b > d < b > e < e b ]8 (1)4
+(21)[ WHITE v90 o5 c2 $DD$00$60 d+^2 $DD$00$60 g+^2 $DD$00$60 b^2 ]
+RHODES v140 (20)8 (1)8 (23)[ TAIKO v180 o4 c+8 > a+8 < g+ > d+ a+ d+ a+8 < g+8 > d+ b c+8 ]4
+RHODES v220 (0)2 v160 (22)[ o2
+b > d+ < f+ > f+ < b > f+ d+ < f+ g > d+ < b d+ > d+ < g > d+ < b
+a > a e < a e > c+ < a > e < e > e < b g > e < b > e < a ]6
+RHODES v220 (0)2 (1)8 (23)4 RHODES v180 (0)4 [ [[ r2 ]]6 r4 [[ o3 e8 > e e ]]3 ]2
+$F4$03 $DE$00$10$2C $E5$00$12$2A SYNTH v220 $F4$01 o4 [ b2 g2 a2 e2 ]3 b2 g2 a2 e4 $F4$01 ^4 $E5$00$00$00 $DF $F4$03
+RHODES v160 (22)8
+[ o4 e8 e8 d e8 e8 d < b8 > e8 d8 d8 e8 d < b8 > e8 d8 e8 d e8 ]4 (0)2
+
+#3 HARPSICHORD v160 y12 l16 (1)3 r4. o4 b8 (1)2 b b b b r8 b b r8 b b8 b8 r /
+(1)32 RHODES v220 y12 q7f (0)2
+SYNTH $F4$03 h-7 (30)[ v220 o4 r8 e e e f+8 r2^ r8 f+ f+ f+ f+8 r8. e e e e8 r ] (32)[ v220 o4 r8 e e e f+8 r2^ v170 o5
+f+32 f+32 f+32 f+32 f+32 f+32 f+32 f+32 
+e32 e32 e32 e32 e32 e32 e32 e32 
+c+32 c+32 c+32 c+32 c+32 c+32 c+32 c+32 
+d32 d32 d32 d32 d32 d32 d32 d32 o4 ] (30)2 h0 $F4$03
+(34)[BASSOON v200 y12 o4 d8. < b8. > e8 d8. < b8. r1^8 ]2
+RHODES y4 r1.^8 o4 g8 g8 r1.. g8 g8 r8
+(31)[ GUITAR v255 q5f o2 y12 b2 g2 a2 e e e g8 g a8 b2 g2 a2 e HARPSICHORD o4 v170 q7f y9 b8 r b8 r8 ]2
+$F4$03 $DE$00$10$2C $E5$00$12$2A SYNTH v220 (6) $E5$00$00$00 $DF h-7 v220 (30) (32) (30)2 h0 $F4$03
+(34)4
+RHODES v180 y12 [ [[ r2 ]]6 r o3 b > c+ d e8 d c+ d8 < b > c+8 < a b8 ]2
+v220 (0)4 $F4$03 (31)4 y10
+$DE$00$10$2C $E5$00$12$2A SYNTH v150 (33)[ o4 r4 e2 r2. e2 e1 r2 d2 ]2
+$E5$00$00$00 $DF $F4$03 (1)4 (21)
+
+#4 v255 $FA$03$3E (40)[ @38 o4 q7f d+4 d+4 ]8 /
+(41)[ KICK4 SNARE4 ]23 (42)[ KICK @37 o3 q7e g8. a+4 ] (41)4
+(41)7 (42) (41)8
+(41)24 (41)7 (42) (41)7 (42)
+(41)19
+(42) (41)7 (42) (41)7 (42) (41)7 (42) (40)16
+(41)3 (43)[ KICK4 SNARE KICK COWBELL8 ] (41)3 (42) (41)3 (43) (41)3 (42)
+(41)7 (42) (41)7 (42) (41)7 (42) (41)7 (42) (41)23 (42)
+
+#5 l16 (1)8 / (1)16
+v170 (50)[ CLAVA a COWBELL g8 r CLAVA a a COWBELL g r4^ CLAVA a a COWBELL g8 CLAVA a a COWBELL g8 CLAVA COWBELL8 CLAVA ]2 (1)24
+(51)[ CYMB v170 q7f o3 f+8 r8 v125 CLAP4 a8 a8 a a r8 [[ a a r8 a4 a8 a8 a a r8 ]]3 ]
+v170 (50)2 CYMB q7f o3 f+8 r2.. r2...
+$FA$03$FF @37 v235 q7f o1 g+64 g+64 g+64 g+64 v255 a+4 r4 $FA$03$00 (1)3
+CYMB v170 f+8 r2.. (1)6 f+8 r2.. (1)2 (21)
+(1)16 (51) (50)4
+(1)8 CYMB v170 q7f o3 f+8 r2.. (1)18 (21)
+CYMB v170 f+8 r2.. (1)6 f+8 r2.. (1)2 (21)
+CYMB v170 f+8 r2.. (1)6 f+8 r2.. (1)2 (21) (1)16 (50)2
+
+#6 l16 $DE$00$0A$0C (!100, -1) (!101, 3)
+@43 v170 SEMIT$0C (60)2 SEMIT$00 / (1)18
+(61)[ @43 v225 o4 d d e r g8 f+ e4 r1^4^ d d e r g8 f+ e4 r4^ ] (1)16
+SYNTH $F4$03 h-7 (62)[ v200 o4 r8 d d d d8 r2^ r8 d d d d8 r8. c+ c+ c+ c+8 r ] (63)[ v200 o4 r8 d d d d8 r2^ v140 o4
+b32 b32 b32 b32 b32 b32 b32 b32
+b32 b32 b32 b32 b32 b32 b32 b32
+e32 e32 e32 e32 e32 e32 e32 e32
+e32 e32 e32 e32 e32 e32 e32 e32 ] (62)2 h0 $F4$03 (1)2 (61)
+@43 SEMIT$F4 (3) r4.. (3) o4 a8 r4^
+(1)16 SEMIT$00
+$F4$03 $DE$00$10$2C $E5$00$12$2A SYNTH v150 (33) $E5$00$00$00 $DF
+h-7 (62) (63) (62)2 h0 $F4$03
+(1)2 (61) (1)2 (61)
+SEMIT$00 @43 v225 (4)2 (1)8
+v170 SEMIT$0C (0)2 (1)50 SEMIT$00 (61)
+
+#7 v100 l16 [ CABASA8 a a a8 a8 a8 a a a8 a8 ]4 /
+[ q7f CABASA8 q7d a8 q7f a8 q7d a8 q7f a8 q7d a8 q7d a8 q7f a8 ]108
